@@ -120,3 +120,8 @@ $(call inherit-product, hardware/samsung_slsi-cm/exynos8890/exynos8890.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/hero-common/hero-common-vendor.mk)
+
+### Ubuntu Touch ###
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/70-herolte.rules:system/halium/lib/udev/rules.d/70-herolte.rules \
+### End Ubuntu Touch ###
