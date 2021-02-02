@@ -123,6 +123,6 @@ $(call inherit-product, vendor/samsung/hero-common/hero-common-vendor.mk)
 
 ### Ubuntu Touch ###
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ubuntu/70-herolte.rules:system/halium/lib/udev/rules.d/70-herolte.rules \
+    $(LOCAL_PATH)/ubuntu/70-herolte.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/android.conf::system/halium/etc/ubuntu-touch-session.d/android.conf
 ### End Ubuntu Touch ###
