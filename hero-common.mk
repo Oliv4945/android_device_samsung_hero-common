@@ -122,7 +122,15 @@ $(call inherit-product, hardware/samsung_slsi-cm/exynos8890/exynos8890.mk)
 $(call inherit-product, vendor/samsung/hero-common/hero-common-vendor.mk)
 
 ### Ubuntu Touch ###
+
+# Copy files to override
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-herolte.rules:system/halium/lib/udev/rules.d/70-android.rules \
-    $(LOCAL_PATH)/ubuntu/android.conf::system/halium/etc/ubuntu-touch-session.d/android.conf
+    $(LOCAL_PATH)/ubuntu/android.conf::system/halium/etc/ubuntu-touch-session.d/android.conf \
+    $(LOCAL_PATH)/ubuntu/ofono.override:system/halium/etc/init/ofono.override
+
+# oFono quirks
+PRODUCT_PROPERTY_OVERRIDES += \
+    ril.device=samsung_msm_8890
+
 ### End Ubuntu Touch ###
