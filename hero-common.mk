@@ -128,10 +128,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-herolte.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/android.conf::system/halium/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/ofono.override:system/halium/etc/init/ofono.override \
-    $(LOCAL_PATH)/ubuntu/device-hacks.conf:system/halium/etc/init/device-hacks.conf
+    $(LOCAL_PATH)/ubuntu/device-hacks.conf:system/halium/etc/init/device-hacks.conf \
+    $(LOCAL_PATH)/ubuntu/touch.pa:system/halium/etc/pulse/touch.pa \
+    $(LOCAL_PATH)/ubuntu/servicemanager.rc:system/etc/init/servicemanager.rc
 
 # oFono quirks
 PRODUCT_PROPERTY_OVERRIDES += \
     ril.device=samsung_msm_8890
+
+PRODUCT_PACKAGES += \
+    libaudioflingerglue \
+    miniafservice
 
 ### End Ubuntu Touch ###
