@@ -134,8 +134,9 @@ PRODUCT_COPY_FILES += \
 
 # oFono quirks
 PRODUCT_PROPERTY_OVERRIDES += \
-    ril.device=samsung_msm_8890
+    ril.device=samsung_exy_8890
 
+# Sound
 PRODUCT_PACKAGES += \
     libaudioflingerglue \
     miniafservice
