@@ -141,4 +141,10 @@ PRODUCT_PACKAGES += \
     libaudioflingerglue \
     miniafservice
 
+
+# USB port handling (For MTP)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/usb/setupusb:system/bin/setupusb \
+    $(LOCAL_PATH)/ubuntu/usb/mtp-state.conf:system/halium/etc/init/mtp-state.conf
+
 ### End Ubuntu Touch ###
